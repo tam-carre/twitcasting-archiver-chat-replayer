@@ -27,7 +27,5 @@ node generateHTMLViewer.js pathToVideo.mp4
 ```
 
 ## Known issues
-- Currently the implementation is too naive for huge numbers of comments. (hangs for a long time on seeking)
+- Tested to work fine on a stream with 21100 chat messages, haven't yet tested any larger.
 - Untested on platforms other than Linux. Feel free to open an issue in case of bugs. Please do open an issue to let me know if it works as expected also.
-- (Solved?) HTML generation might occur twice at once resulting in a corrupted file. If this happens run the above command to re-generate the page.
-
