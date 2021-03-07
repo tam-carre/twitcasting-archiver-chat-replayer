@@ -1,0 +1,142 @@
+/* Reset */
+html { box-sizing: border-box; font-size: 16px; }
+*, *:before, *:after { box-sizing: inherit; }
+body, h1, h2, h3, h4, h5, h6, p, ol, ul { margin: 0; padding: 0; font-weight: normal; }
+ol, ul { list-style: none; }
+img { max-width: 100%; height: auto; }
+
+/* Style */
+body {
+  font-family: Kosugi Maru;
+  background-color: #E2ECF2;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.page {
+  display: flex;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  height: calc(100vh - 50px);
+  width: 100%;
+  padding: 20px;
+  align-items: flex-start;
+  overflow-y: hidden;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 25px;
+  text-align: center;
+}
+
+.streamer {
+  color: #094A73;
+  text-align: center;
+}
+
+.vid-block {
+  flex-grow: 1;
+  /* height: 100%; */
+}
+
+.info {
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.vid {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.vid video {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 150px);
+}
+
+.chat {
+  /* flex-grow: 1; */
+  width: 330px;
+  min-width: 330px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  height: 100%;
+  background-color: #FFFCFD;
+  overflow: hidden;
+}
+
+
+.comment {
+  display: none;
+  font-size: 14px;
+  border-bottom: 1px solid #E9E9E9;
+  margin-bottom: 7px;
+  padding-bottom: 7px;
+}
+
+.visible {
+  display: flex;
+}
+
+.avatar img {
+  width: 36px;
+  /* height: 36px; */
+  border-radius: 50%;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.author a {
+  text-decoration: none;
+  color: #094A73;
+}
+
+.timestamp {
+  color: #C8C8C8;
+}
+
+.message {
+  padding-left: 15px;
+  width: 100%;
+}
+
+.text {
+  padding-top: 7px;
+}
+
+.text img {
+  vertical-align: bottom;
+  margin: 0 2px;
+}
+
+/* .vid { */
+  /* overflow: auto; */
+  /* resize: both; */
+/* } */
+
+/* video { */
+  /* width: 100%; */
+  /* height: auto; */
+/* } */
