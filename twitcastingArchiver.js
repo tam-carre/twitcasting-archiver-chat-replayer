@@ -1,11 +1,9 @@
 // Twitcasting Archiver
-//
-// Watches for new streams from a Twitcaster user and downloads
-// both video and a .jsonl of timestamped livechat messages
-// Ensure the latest version of Streamlink is installed.
+
+// Watches for new streams from a Twitcaster user
+// Downloads streams, metadata, timestamped chat, and generates replay webpage
 
 // usage: node twitcastingArchiver.js streamerId passwordFile(optional)
-// setup: npm i node-fetch websocket common-tags
 
 
 // Dependencies
