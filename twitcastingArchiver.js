@@ -169,7 +169,6 @@ const dlStream = (dir, streamer, liveId, pw) => new Promise(async (resolve) => {
   fs.writeFile(metadataFile, JSON.stringify(metadata), () => {
     log(`Downloaded metadata to ${metadataFile}`)
   })
-
 })
 
 // Main function
