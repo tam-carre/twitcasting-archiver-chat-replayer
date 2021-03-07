@@ -18,7 +18,7 @@ npm install
 ## Usage
 To continuously watch for new streams and archive them as they go live:
 ```sh
-node twitcastingArchiver.js streamerId passwordFile(optional)
+node twitcastingArchiver.js streamerName passwordFile(optional)
 ```
 
 If something went wrong and you need to (re-)generate the HTML viewer yourself:
