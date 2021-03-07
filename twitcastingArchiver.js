@@ -66,7 +66,7 @@ const isStreaming = (streamer) => new Promise(async (resolve) => {
   while (true) {
     const liveId = await getLiveId(streamer)
     if (liveId) return resolve(liveId)
-    sleep(15000)
+    sleep(5000)
   }
 })
 
