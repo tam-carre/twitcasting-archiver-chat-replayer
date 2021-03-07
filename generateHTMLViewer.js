@@ -96,7 +96,7 @@ const mk = (tag, cls, parent, options) => {
   el.classList.add(cls)
   if (parent) parent.appendChild(el)
   if (options == null) return el
-  for (const [key, value] of Object.entries(options)) el[key] = value
+  Object.assign(el, options)
   return el
 }
 
