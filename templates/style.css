@@ -20,7 +20,7 @@ a:visited {
   color: inherit;
 }
 
-.page {
+#page {
   display: flex;
   position: fixed;
   left: 50%;
@@ -39,39 +39,43 @@ h2 {
   margin-bottom: 15px;
 }
 
-.title {
+#title {
   font-size: 25px;
   text-align: center;
 }
 
-.streamer {
+#streamer {
   color: #094A73;
   text-align: center;
 }
 
-.vid-block {
+#category {
+	text-align: right;
+}
+
+#vid-block {
   flex-grow: 1;
 }
 
-.info {
+#info {
   margin: 0 10px;
   padding: 10px;
 }
 
-.vid {
+#vid {
   margin: 0 10px;
   padding: 10px;
   border-radius: 5px;
   height: 100%;
 }
 
-.vid video {
+#vid video {
   width: 100%;
   height: auto;
   max-height: calc(100vh - 150px);
 }
 
-.chat {
+#chat {
   width: 330px;
   min-width: 330px;
   padding: 10px 10px;
@@ -90,13 +94,8 @@ h2 {
   padding-bottom: 7px;
 }
 
-.visible {
-  display: flex;
-}
-
 .avatar img {
   width: 36px;
-  /* height: 36px; */
   border-radius: 50%;
 }
 
@@ -130,10 +129,10 @@ h2 {
 }
 
 @media (max-width: 768px) {
-	.page {
+	#page {
 		flex-wrap: wrap;
 	}
-	.chat {
+	#chat {
 		width: 100%;
 		margin: 0 20px;
 	}

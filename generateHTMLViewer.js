@@ -43,35 +43,35 @@ const pageHeader = `
       <title>${name}</title>
     </head>
     <body>
-      <div id="page" class="page">
-        <div class="vid-block">
-          <div class="info">
-            <div class="title">
+      <div id="page">
+        <div id="vid-block">
+          <div id="info">
+            <div id="title">
               <a href="https://twitcasting.tv/${meta.user}/movie/${meta.movie.id}">
                 ${title}
               </a>
             </div>
-            <div class="streamer">
+            <div id="streamer">
               <a href="https://twitcasting.tv/${meta.user}">
                 @${meta.user}
               </a>
             </div>
-            <div class="category">
+            <div id="category">
               <a href="https://twitcasting.tv/genre=${catId}">
                 ${catName}
               </a>
             </div>
           </div>
-          <div class="vid">
+          <div id="vid">
             <video controls id="video">
               <source src="${encodeURIComponent(name)}${ext}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
           </div>
         </div>
-        <div class="chat">
+        <div id="chat">
           <h2>コメント</h2>
-            <div id="comments" class="comments">
+            <div id="comments">
             </div>
           </div>
         </div>
