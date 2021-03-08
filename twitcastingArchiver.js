@@ -55,7 +55,7 @@ const getLiveId = async (streamer) => {
 // Get a metadata JSON of the stream
 const getMetadata = async (liveId, pw) => {
   const token = await getViewerToken(liveId, pw)
-  const resp = await fetch(` https://frontendapi.twitcasting.tv/movies/${liveId}/status/viewer?token=${token}`)
+  const resp = await fetch(`https://frontendapi.twitcasting.tv/movies/${liveId}/status/viewer?token=${token}`)
   const metadata = await resp.json()
   return metadata
 }
@@ -66,7 +66,7 @@ const isStreaming = (streamer) => new Promise(async (resolve) => {
   while (true) {
     const liveId = await getLiveId(streamer)
     if (liveId) return resolve(liveId)
-    sleep(5000)
+    await sleep(15000)
   }
 })
 
