@@ -26,7 +26,7 @@ const catId = (meta.movie.category ? meta.movie.category.id : '')
 const catName = (meta.movie.category ? meta.movie.category.name : '')
 const title = meta.movie.title ?? '無題'
 
-const style = fs.readFileSync('assets/style.css')
+const style = fs.readFileSync('templates/style.css')
 
 const pageHeader = `
   <!DOCTYPE html>
@@ -91,7 +91,7 @@ readStream.on('data', (line) => {
 
 // Append footer
 readStream.on('end', () => {
-	const script = fs.readFileSync('assets/script.js')
+	const script = fs.readFileSync('templates/script.js')
 	const pageFooter = `
           ]
 					${script}
