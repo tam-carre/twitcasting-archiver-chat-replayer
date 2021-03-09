@@ -13,7 +13,7 @@ const chatFile = path.join(dir, `${name}.chat.jsonl`)
 const metadataFile = path.join(dir, `${name}.info.json`)
 const outputName = `${name}.html`
 const outputFile = path.join(dir, outputName)
-
+let g:html_indent_style1 = "inc"
 // Script
 console.log(`Writing HTML viewer to ${outputFile}.`)
 if (fs.existsSync(outputFile)) fs.unlinkSync(outputFile)
@@ -28,7 +28,7 @@ const title = meta.movie.title ?? '無題'
 
 const style = fs.readFileSync('templates/style.css')
 
-const pageHeader = `
+const pageHeader = html`
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -92,7 +92,7 @@ readStream.on('data', (line) => {
 // Append footer
 readStream.on('end', () => {
 	const script = fs.readFileSync('templates/script.js')
-	const pageFooter = `
+	const pageFooter = html`
           ]
 					${script}
         </script>
