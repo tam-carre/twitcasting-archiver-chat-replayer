@@ -36,9 +36,9 @@ const pageHeader = html`
       <meta name="viewport" content="width=device-width">
       <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=block" rel="stylesheet">
 
-			<style>
-				${style}
-			</style>
+      <style>
+        ${style}
+      </style>
 
       <title>${name}</title>
     </head>
@@ -91,10 +91,10 @@ readStream.on('data', (line) => {
 
 // Append footer
 readStream.on('end', () => {
-	const script = fs.readFileSync('templates/script.js')
-	const pageFooter = `
+  const script = fs.readFileSync('templates/script.js')
+  const pageFooter = `
           ]
-					${script}
+          ${script}
         </script>
       </body>
     </html>
