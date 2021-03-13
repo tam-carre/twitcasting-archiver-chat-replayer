@@ -3,7 +3,7 @@ let maxComments = 20
 const convertSeconds = (x) => new Date(x * 1000).toISOString().substr(11, 8)
 const makeComment = (json, container) => {
   const profile =  `https://twitcasting.tv/${json.id}`
-  const commentHTML = html`
+  const commentHTML = `
     <div class="comment">
       <div class="avatar">
         <a class="profileLink" href="${profile}">

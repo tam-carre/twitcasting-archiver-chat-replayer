@@ -28,7 +28,7 @@ const title = meta.movie.title ?? '無題'
 
 const style = fs.readFileSync('templates/style.css')
 
-const pageHeader = html`
+const pageHeader = `
   <!DOCTYPE html>
   <html lang="en">
     <head>

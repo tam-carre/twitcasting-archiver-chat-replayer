@@ -43,13 +43,18 @@ const getViewerToken = async (liveId, pw) => {
 
 // Get the ID of the livestream
 const getLiveId = async (streamer) => {
-  const resp = await fetch(`https://twitcasting.tv/${streamer}/show/`)
-  const source = await resp.text()
-  const isStreaming = source.includes(' LIVE ')
-  if (!isStreaming) return false
-  const regex = new RegExp(`${streamer}/movie/\\d+`, 'i')
-  const liveId = source.match(regex)[0].match(/\d+$/)[0]
-  return liveId
+  try {
+    const resp = await fetch(`https://twitcasting.tv/${streamer}/show/`)
+    const source = await resp.text()
+    const isStreaming = source.includes(' LIVE ')
+    if (!isStreaming) return false
+    const regex = new RegExp(`${streamer}/movie/\\d+`, 'i')
+    const liveId = source.match(regex)[0].match(/\d+$/)[0]
+    return liveId
+  }
+  catch(e) {
+    log(e)
+  }
 }
 
 // Get a metadata JSON of the stream
@@ -66,7 +71,7 @@ const isStreaming = (streamer) => new Promise(async (resolve) => {
   while (true) {
     const liveId = await getLiveId(streamer)
     if (liveId) return resolve(liveId)
-    await sleep(15000)
+    await sleep(5000)
   }
 })
 
